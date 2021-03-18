@@ -7,6 +7,7 @@ plugins {
 group = 'com.lljjssjjll.practice'
 version = '0.0.1'
 sourceCompatibility = '11'
+description = '이것저것 테스트하는 실습용 프로젝트'
 
 configurations {
     compileOnly {
