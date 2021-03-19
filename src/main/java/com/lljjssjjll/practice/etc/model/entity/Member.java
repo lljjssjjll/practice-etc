@@ -1,19 +1,21 @@
 package com.lljjssjjll.practice.etc.model.entity;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.With;
-import org.springframework.data.annotation.Id;
+import lombok.NoArgsConstructor;
 
-@Getter
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+import javax.persistence.*;
+
+@Entity
+@Table(name = "member")
+@NoArgsConstructor
 public class Member {
 
     @Id
-    @With
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
     private Integer id;
-    private final String name;
+    @Column(name = "name")
+    private String name;
 
     public Member(String name) {
         this.name = name;
